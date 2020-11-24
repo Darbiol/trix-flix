@@ -6,6 +6,7 @@ import Layout from "../../components/Layout/Layout";
 import Carousel from "../../components/Carousel/Carousel";
 import FavoriteStar from "../../components/FavoriteStar/FavoriteStar";
 import QueryString from "querystring";
+import Image from "../../components/Image/Image";
 
 interface Props {
     movie?: any;
@@ -121,7 +122,7 @@ const MoviePage:NextPage<Props>  = ({movie, similar}) => {
                 <div className="row col-lg-12 pr-0">
                     <div className="title col-lg-10">
                         <div className="col-auto px-0">
-                            <img src={`${IMG_BASE_URL}/${movie['backdrop_path']}`} alt="" className="movie-img"/>
+                            <Image source={`${IMG_BASE_URL}${movie['backdrop_path']}`} className="movie-img"/>
                         </div>
                         <div className="title-wrapper col-auto px-0">
                             <span>{movie.title}</span>
@@ -156,7 +157,7 @@ const MoviePage:NextPage<Props>  = ({movie, similar}) => {
                     <p>{movie.overview}</p>
                 </div>
                 <div className="poster col-lg-3 col-md-3 pr-0">
-                    <img src={`${IMG_BASE_URL}/${movie['poster_path']}`} alt="" className="img-fluid"/>
+                    <Image source={`${IMG_BASE_URL}${movie['poster_path']}`} alternate="" className="img-fluid"/>
                 </div>
             </DeatailsBody>
         </Details>

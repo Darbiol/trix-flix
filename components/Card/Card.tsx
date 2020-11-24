@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {IMG_BASE_URL} from "../../utils/constants";
 import Link from "next/link";
 import { Movie } from "../../interfaces";
+import Image from "../Image/Image";
 
 const CardBody = styled.div`
     display : flex
@@ -44,7 +45,7 @@ const CardCmp = (props:Props) => {
         <Card className="col-lg-2 col-md-3 col-sm-6 px-0">
             <Link href="/movie/[id]" as={`/movie/${props.data.id}`}>
                 <a href="">
-                    <img src={`${IMG_BASE_URL}/${props.data['poster_path']}`} alt="" className="img-fluid card-thumbnail"/>
+                    <Image source={`${IMG_BASE_URL}/${props.data['poster_path']}`} alternate="" className="img-fluid card-thumbnail"/>
                 </a>
             </Link>
             <CardBody className="card-body">
