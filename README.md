@@ -17,3 +17,6 @@ A simple web applicaiton where a user can view a movie's details and is able to 
 2. run `yarn install` or `npm install` inside the root folder to install all the dependencies
 3. run `yarn dev` or `npm run dev` to start the server
 4. open your browser to [http://localhost:3000](http://localhost:3000)
+
+## Deployment
+This project is deployed using [vercel](https://vercel.com) which is connected to this repository. For more info on how to setup vercel go [here](https://nextjs.org/docs/deployment)
